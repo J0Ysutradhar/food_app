@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'output.css' %}">
+    <link rel="stylesheet" href="{% static 'hotel/output.css' %}">
     <title>
         {% block title %}
         {% endblock %}
@@ -15,18 +15,22 @@
 
 <body>
 
-    <div>
-        <nav class=" flex justify-between items-center">
+    <nav class=" bg-blue-500  ">
+        <div class="flex justify-between items-center mx-50 p-3  border-gray-50">
+
             <div>
-                <p>Metasoul</p>
+                <p class="text-2xl text-white font-semibold">Metasoul</p>
             </div>
-            <div>
+
+            <div class=" flex justify-between gap-5  text-xl text-gray-100">
                 <p>Food</p>
                 <p>About</p>
                 <p>Contact</p>
             </div>
-        </nav>
-    </div>
+
+        </div>
+    </nav>
+
 
     {% block body %}
     {% endblock %}
