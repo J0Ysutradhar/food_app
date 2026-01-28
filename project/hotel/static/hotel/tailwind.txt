@@ -1,0 +1,1 @@
+npx @tailwindcss/cli -i ./hotel/static/hotel/input.css -o ./hotel/static/hotel/output.css --watch
