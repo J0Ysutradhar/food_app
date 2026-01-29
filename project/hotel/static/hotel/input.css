@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@font-face {
+    font-family: baka;
+    src: url(./fonts/PlaywriteNZBasic-Regular.ttf);
+}
+
+@theme{
+    --font-baka: baka, 'sans-serif';
+}
