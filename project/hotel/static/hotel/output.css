@@ -216,6 +216,12 @@
   .mx-70 {
     margin-inline: calc(var(--spacing) * 70);
   }
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
   .mt-30 {
     margin-top: calc(var(--spacing) * 30);
   }
