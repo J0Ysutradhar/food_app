@@ -25,3 +25,10 @@ def add_food(request):
         'form':form, 
     }
     return render(request, 'food/add_item.html', context=context)
+
+def detail(request, id):
+    food_item=item.objects.get(id=id)
+    context ={
+        'food_item':food_item,
+    }
+    return render(request, 'food/detail.html', context)
