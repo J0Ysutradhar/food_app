@@ -12,3 +12,6 @@ def menu(request):
         'items':items,
     }
     return render(request, 'food/menu.html', context)
+
+def add_item(request):
+    return 
