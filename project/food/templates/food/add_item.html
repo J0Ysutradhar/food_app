@@ -6,6 +6,12 @@ Add item in menu
 
 {% block body %}
 
-
+<div>
+    <form  method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Add</button>
+    </form>
+</div>
 
 {% endblock %}

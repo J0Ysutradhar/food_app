@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import item
+from .forms import add_item
 # Create your views here.
 
 def homepage(request):
@@ -13,5 +14,14 @@ def menu(request):
     }
     return render(request, 'food/menu.html', context)
 
-def add_item(request):
-    return 
+def add_food(request):
+    form=add_item(request.POST or None)
+    if request.method=="POST":
+        if form.is_valid():
+            form.save()
+            return redirect('food:menu')
+    
+    context={
+        'form':form, 
+    }
+    return render(request, 'food/add_item.html', context=context)
