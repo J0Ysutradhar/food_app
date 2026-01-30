@@ -32,3 +32,17 @@ def detail(request, id):
         'food_item':food_item,
     }
     return render(request, 'food/detail.html', context)
+
+def edit_item(request, id):
+    instance= item.objects.get(id=id)    
+    form=add_item(request.POST or None, instance=instance)
+
+    if request.method=='POST':
+        if form.is_valid():
+            form.save()
+            return redirect('food:menu')
+    
+    context={
+        'form':form,
+    }
+    return render(request, 'food/add_item.html', context)
