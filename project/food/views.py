@@ -46,3 +46,12 @@ def edit_item(request, id):
         'form':form,
     }
     return render(request, 'food/add_item.html', context)
+
+def delete_item(request, id):
+    food_item=item.objects.get(id=id)
+    if request.method =='POST':
+        food_item.delete()
+        return redirect('food:menu')
+    return render (request, 'food/delete.html')
+
+    

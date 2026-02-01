@@ -8,5 +8,6 @@ urlpatterns = [
     path('menu/add/', views.add_food, name='add_item'),
     path('menu/item/<int:id>/', views.detail, name='detail'),
     path('menu/item/<int:id>/edit', views.edit_item, name='edit'),
+    path('menu/item/<int:id>/delete', views.delete_item, name='delete')
 
 ]
