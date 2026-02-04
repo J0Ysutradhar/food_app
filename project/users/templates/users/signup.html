@@ -1,0 +1,24 @@
+{% extends 'hotel/base.html' %}
+
+{% block title %}
+Signup
+{%endblock%}
+
+{% block body %}
+
+<div class="m-40 w-fit mx-70">
+
+    <form method="post">
+        {%csrf_token%}
+        {{form}}
+        <button type="submit">Signup</button>
+    </form>
+</div>
+
+
+<div class="absolute inset-y-40 right-20 ">
+    <img src="https://www.ihgplc.com/~/media/Images/I/Ihg-Plc/images/news/2022/hotel-of-the-month-intercontinental-amman-jordan/intercontinental-jordan-amman.jpg"
+        alt="" srcset="" class=" rounded-2xl shadow-2xl border-gray-50 border-3" height="700 px" width="750 px">
+</div>
+
+{% endblock %}
