@@ -11,7 +11,7 @@ def signup(request):
             form.save()
             username=form.cleaned_data.get('username')
             messages.success(request, f"{username}, your account created successfully")
-            return redirect('hotel:homepage')
+            return redirect('users:login')
     context={
         'form':form,
     }
