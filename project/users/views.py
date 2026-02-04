@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import UserSignupForm
 from django.contrib import messages
+from django.contrib.auth import logout as lgout
+
 # Create your views here.
 
 def signup(request):
@@ -17,3 +19,8 @@ def signup(request):
     }
 
     return render(request, 'users/signup.html', context)
+
+def logout(request):
+    lgout(request)
+    messages.success (request, "Logout successfully")
+    return redirect('hotel:homepage')
