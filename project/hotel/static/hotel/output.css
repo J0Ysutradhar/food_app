@@ -15,9 +15,15 @@
     --color-red-700: oklch(50.5% 0.213 27.518);
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
+    --color-green-100: oklch(96.2% 0.044 156.743);
+    --color-green-200: oklch(92.5% 0.084 155.995);
+    --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-400: oklch(79.2% 0.209 151.711);
+    --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-green-700: oklch(52.7% 0.154 150.069);
     --color-blue-50: oklch(97% 0.014 254.604);
     --color-blue-100: oklch(93.2% 0.032 255.585);
+    --color-blue-200: oklch(88.2% 0.059 254.128);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
@@ -25,10 +31,13 @@
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -281,6 +290,10 @@
     border-style: var(--tw-border-style);
     border-width: 3px;
   }
+  .border-l-4 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 4px;
+  }
   .border-blue-100 {
     border-color: var(--color-blue-100);
   }
@@ -290,11 +303,17 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .border-green-500 {
+    border-color: var(--color-green-500);
+  }
   .bg-blue-50 {
     background-color: var(--color-blue-50);
   }
   .bg-blue-900 {
     background-color: var(--color-blue-900);
+  }
+  .bg-green-200 {
+    background-color: var(--color-green-200);
   }
   .bg-red-100 {
     background-color: var(--color-red-100);
@@ -307,6 +326,9 @@
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -357,6 +379,10 @@
   .text-6xl {
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-sm {
     font-size: var(--text-sm);

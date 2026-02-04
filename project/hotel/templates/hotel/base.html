@@ -19,11 +19,15 @@
         <div class="flex justify-between items-center mx-50 p-3  border-gray-50  ">
 
             <div>
-                <a href="{% url 'hotel:homepage' %}"><p class="text-2xl text-white font-semibold cursor-pointer">Resisson</p></a>
+                <a href="{% url 'hotel:homepage' %}">
+                    <p class="text-2xl text-white font-semibold cursor-pointer">Resisson</p>
+                </a>
             </div>
 
             <div class=" flex justify-between gap-5  text-xl text-gray-100">
-                <a href="{% url 'food:menu' %}"><p class=" cursor-pointer">Food</p></a>
+                <a href="{% url 'food:menu' %}">
+                    <p class=" cursor-pointer">Food</p>
+                </a>
                 <p class=" cursor-pointer">About</p>
                 <p class=" cursor-pointer">Contact</p>
             </div>
@@ -31,9 +35,19 @@
         </div>
     </nav>
 
+<div class="p-2">
+    {%if messages%}
+    {%for message in messages%}
+    <div class="bg-green-200 border-l-4 border-green-500 text-white p-4 rounded-lg w-fit pt-3">
+        <p class="text-lg font-semibold">Account Status: Activated</p>
+        <p>{{message}}</p>
+    </div>
+    {%endfor%}
+    {%endif%}
 
     {% block body %}
     {% endblock %}
+</div>
 
 </body>
 
